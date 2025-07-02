@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "../styles/Services6.css";  // Make sure to use a separate CSS file for this page.
+import "../styles/Services1.css";  // Ensure this is the same Services1.css file
 import { FaBuilding, FaRegLightbulb, FaDraftingCompass } from "react-icons/fa"; // Adding icons
 import Services6Img1 from "../assets/services6.jpeg";  // First image for slideshow
 import Services6Img2 from "../assets/services6.jpeg";  // Second image for slideshow
@@ -21,11 +21,14 @@ const Services6Page = () => {
   };
 
   return (
-    <section className="service-details-louvers">
+    <section className="service-details-acp">
       <div className="container service-layout">
         <div className="service-content">
-          <h2>Front Elevation Work</h2>
-          <div className="underline"></div> {/* Blue line under the heading */}
+          <h2 className="section-heading">
+            Front Elevation Work
+            <span className="underline"></span>
+          </h2>
+
           <div className="info-point">
             <FaBuilding className="icon" />
             <p>
@@ -33,6 +36,7 @@ const Services6Page = () => {
               impression. We design with modern architecture principles for both form and function.
             </p>
           </div>
+
           <div className="info-point">
             <FaRegLightbulb className="icon" />
             <p>
@@ -40,6 +44,7 @@ const Services6Page = () => {
               creativity with structural integrity to enhance your property's look and value.
             </p>
           </div>
+
           <div className="info-point">
             <FaDraftingCompass className="icon" />
             <p>

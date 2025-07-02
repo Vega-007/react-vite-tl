@@ -22,28 +22,35 @@ import "./styles/index.css";
 const App = () => {
   return (
     <Router>
-      <Header />
-      <Routes>
-        {/* Home Page */}
-        <Route path="/" element={<Home />} />
+      <div className="page-container">
+        <Header />
 
-        {/* Static Pages */}
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services1" element={<Services1Page />} />
-        <Route path="/services2" element={<Services2Page />} />
-        <Route path="/services3" element={<Services3Page />} />
-        <Route path="/services4" element={<Services4Page />} />
-        <Route path="/services5" element={<Services5Page />} />
-        <Route path="/services6" element={<Services6Page />} />
-        <Route path="/services7" element={<Services7Page />} />
-        <Route path="/services8" element={<Services8Page />} />
-        <Route path="/services9" element={<Services9Page />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+        {/* Main content that stretches */}
+        <div className="content-wrap">
+          <Routes>
+            {/* Home Page */}
+            <Route path="/" element={<Home />} />
+
+            {/* Static Pages */}
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services1" element={<Services1Page />} />
+            <Route path="/services2" element={<Services2Page />} />
+            <Route path="/services3" element={<Services3Page />} />
+            <Route path="/services4" element={<Services4Page />} />
+            <Route path="/services5" element={<Services5Page />} />
+            <Route path="/services6" element={<Services6Page />} />
+            <Route path="/services7" element={<Services7Page />} />
+            <Route path="/services8" element={<Services8Page />} />
+            <Route path="/services9" element={<Services9Page />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+
+        <Footer />
+      </div>
     </Router>
   );
 };

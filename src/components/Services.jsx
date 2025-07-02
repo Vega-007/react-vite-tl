@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/pages.css";
+import "../styles/service.css";
 import Services1 from "../assets/services1.jpeg";
 import Services2 from "../assets/services2.jpeg";
 import Services3 from "../assets/services3.jpeg";
@@ -32,9 +32,25 @@ const Services = () => {
   // Retrieve saved service index from localStorage when component mounts
   useEffect(() => {
     const savedIndex = localStorage.getItem("currentServiceIndex");
+
     if (savedIndex) {
+      // If saved index exists, use it
       setCurrentService(parseInt(savedIndex, 10));
+    } else {
+      // If no saved index, set the default first service
+      setCurrentService(0);
     }
+
+    // Reset the localStorage index on page reload (or based on your specific logic)
+    window.addEventListener("beforeunload", () => {
+      // Clear localStorage to reset the service index when page is refreshed
+      localStorage.removeItem("currentServiceIndex");
+    });
+
+    return () => {
+      // Cleanup the event listener on component unmount
+      window.removeEventListener("beforeunload", () => {});
+    };
   }, []);
 
   const nextService = () => {
@@ -50,13 +66,13 @@ const Services = () => {
   };
 
   const handleServiceClick = (index) => {
-    // Save the current service index in localStorage
+    // Save the current service index in localStorage when a service is clicked
     localStorage.setItem("currentServiceIndex", index);
   };
 
   return (
     <section className="services">
-      <h2 className="section-heading">Our Services</h2>
+      <h2 className="services-heading">Our Services</h2>
 
       <div className="horizontal-slider">
         {/* Left button */}

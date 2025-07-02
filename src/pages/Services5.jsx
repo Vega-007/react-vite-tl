@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "../styles/Services5.css";  // Make sure to use a separate CSS file for this page.
+import "../styles/Services1.css";  // Ensure this is the same Services1.css file
 import { FaTools, FaWarehouse, FaPaintRoller } from "react-icons/fa"; // Adding icons
 import Services5Img1 from "../assets/services5.jpeg";  // First image for slideshow
 import Services5Img2 from "../assets/services5.jpeg";  // Second image for slideshow
@@ -21,11 +21,14 @@ const Services5Page = () => {
   };
 
   return (
-    <section className="service-details-louvers">
+    <section className="service-details-acp">
       <div className="container service-layout">
         <div className="service-content">
-          <h2>Aluminium Partition Work</h2>
-          <div className="underline"></div> {/* Blue line under the heading */}
+          <h2 className="section-heading">
+            Aluminium Partition Work
+            <span className="underline"></span>
+          </h2>
+
           <div className="info-point">
             <FaTools className="icon" />
             <p>
@@ -33,6 +36,7 @@ const Services5Page = () => {
               office interiors. Our partitions can be customized with glass, panels, or both.
             </p>
           </div>
+
           <div className="info-point">
             <FaWarehouse className="icon" />
             <p>
@@ -40,6 +44,7 @@ const Services5Page = () => {
               partitions offer a balance of privacy and transparency with modern design appeal.
             </p>
           </div>
+
           <div className="info-point">
             <FaPaintRoller className="icon" />
             <p>

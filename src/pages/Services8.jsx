@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import "../styles/Services8.css";  // Use separate CSS for this page
+import "../styles/Services1.css"; // Same CSS file
 import { FaGlassMartiniAlt, FaShieldAlt, FaCameraRetro } from "react-icons/fa"; // Icons for services
-import Services8Img1 from "../assets/services8.jpeg";  // Image 1 for slideshow
-import Services8Img2 from "../assets/services8.jpeg";  // Image 2 for slideshow
+import Services8Img1 from "../assets/services8.jpeg"; // Image 1 for slideshow
+import Services8Img2 from "../assets/services8.jpeg"; // Image 2 for slideshow
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,11 +21,13 @@ const Services8Page = () => {
   };
 
   return (
-    <section className="service-details-louvers">
+    <section className="service-details-acp">
       <div className="container service-layout">
         <div className="service-content">
-          <h2>Spider Glass Installation</h2>
-          <div className="underline"></div> {/* Blue line under the heading */}
+          <h2 className="section-heading">
+            Spider Glass Installation
+            <span className="underline"></span> {/* Blue line under the heading */}
+          </h2>
           <div className="info-point">
             <FaGlassMartiniAlt className="icon" />
             <p>

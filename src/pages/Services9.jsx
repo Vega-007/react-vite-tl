@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import "../styles/Services9.css";  // Use separate CSS for this page
+import "../styles/Services1.css";  // Use the same CSS for this page
 import { FaWindowMaximize, FaShieldAlt, FaCheckCircle } from "react-icons/fa"; // Icons for services
 import Services9Img1 from "../assets/services9.jpeg";  // Image 1 for slideshow
 import Services9Img2 from "../assets/services9.2.jpeg";  // Image 2 for slideshow
-import Services9Img3 from "../assets/services9.1.jpeg";  // Image 2 for slideshow
+import Services9Img3 from "../assets/services9.1.jpeg";  // Image 3 for slideshow
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,11 +22,13 @@ const Services9Page = () => {
   };
 
   return (
-    <section className="service-details-upvc">
+    <section className="service-details-acp">
       <div className="container service-layout">
         <div className="service-content">
-          <h2>UPVC Windows & Doors</h2>
-          <div className="underline"></div> {/* Blue line under the heading */}
+          <h2 className="section-heading">
+            UPVC Windows & Doors
+            <span className="underline"></span> {/* Blue line under the heading */}
+          </h2>
           <div className="info-point">
             <FaWindowMaximize className="icon" />
             <p>

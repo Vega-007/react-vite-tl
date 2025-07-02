@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/pages.css";
+import "../styles/Servicesp.css";
 import Services1 from "../assets/services1.jpeg";
 import Services2 from "../assets/services2.jpeg";
 import Services3 from "../assets/services3.jpeg";

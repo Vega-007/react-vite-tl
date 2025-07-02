@@ -1,0 +1,145 @@
+/* === PROJECTS SECTION === */
+.projects {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* === SECTION HEADING === */
+.projects .section-heading {
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.projects .section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #145dc0;
+  border-radius: 2px;
+}
+
+/* === PROJECT GRID === */
+.projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* === INDIVIDUAL CARD === */
+.projects .project-item {
+  background-color: #f9fbff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.projects .project-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(26, 115, 232, 0.2);
+}
+
+/* === IMAGE === */
+.projects .project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #1a73e8;
+}
+
+/* === TITLE === */
+.projects .project-item h3 {
+  font-size: 1.15rem;
+  color: #145dc0;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* === DESCRIPTION === */
+.projects .project-item p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  word-break: break-word;
+  flex-grow: 1;
+}
+
+/* === ANIMATION === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE TWEAKS === */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 15px;
+  }
+
+  .projects .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .projects .project-item img {
+    height: 180px;
+  }
+
+  .projects .project-item h3 {
+    font-size: 1.05rem;
+  }
+
+  .projects .project-item p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects .section-heading {
+    font-size: 1.6rem;
+    width: 90%;
+  }
+
+  .projects .project-item {
+    padding: 12px;
+  }
+
+  .projects .project-item img {
+    height: 160px;
+  }
+
+  .projects .project-item h3 {
+    font-size: 1rem;
+  }
+
+  .projects .project-item p {
+    font-size: 0.9rem;
+  }
+}

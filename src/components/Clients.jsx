@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/index.css";
+import "../styles/clients.css";
 
 // Import client images from the src folder
 import Client1 from "../assets/clients.jpg";

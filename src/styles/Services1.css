@@ -1,116 +1,111 @@
+/* === ROOT ACP SERVICE SECTION === */
 .service-details-acp {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
+  padding: 120px 20px 80px;
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  scroll-margin-top: 120px;
+}
+
+/* === FLEX LAYOUT === */
+.service-details-acp .service-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* === TEXT BLOCK === */
+.service-details-acp .service-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* === HEADING === */
+.service-details-acp .section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.service-details-acp .section-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #1a73e8, #0d47a1);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+/* === INFO POINTS === */
+.service-details-acp .info-point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.service-details-acp .info-point .icon {
+  font-size: 1.5rem;
+  color: #1a73e8;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.service-details-acp .info-point p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* === EXTRA NOTE === */
+.service-details-acp .extra-note {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* === IMAGE SLIDER === */
+.service-details-acp .service-slider-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.service-details-acp .slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* === RESPONSIVE TWEAKS === */
+@media (max-width: 768px) {
+  .service-details-acp .service-layout {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .service-layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-    flex-wrap: wrap;
+
+  .service-details-acp .service-content,
+  .service-details-acp .service-slider-wrapper {
+    max-width: 100%;
   }
-  
-  .service-content {
-    flex: 1 1 100%;
-    max-width: 600px;
-  }
-  
-  .section-heading {
+
+  .service-details-acp .section-heading {
     font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    position: relative;
+    text-align: center;
   }
-  
-  .underline {
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #007bff;
-    margin-top: 0.5rem;
+
+  .service-details-acp .info-point {
+    flex-direction: row;
   }
-  
-  .info-point {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  .icon {
-    color: #007bff;
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    margin-top: 4px;
-  }
-  
-  .info-point p {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-  }
-  
-  .extra-note {
+
+  .service-details-acp .info-point p {
     font-size: 0.95rem;
-    color: #666;
-    margin-top: 1.5rem;
-    font-style: italic;
   }
-  
-  .service-slider-wrapper {
-    flex: 1 1 100%;
-    max-width: 600px;
-  }
-  
-  .slider-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* ========== Responsive ========== */
-  @media (min-width: 768px) {
-    .service-content,
-    .service-slider-wrapper {
-      flex: 1 1 45%;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .service-layout {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .section-heading {
-      font-size: 1.6rem;
-      text-align: center;
-    }
-  
-    .info-point {
-      flex-direction: row;
-    }
-  
-    .slider-image {
-      margin-top: 2rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .info-point p {
-      font-size: 0.95rem;
-    }
-  
-    .icon {
-      font-size: 1.2rem;
-    }
-  
-    .extra-note {
-      text-align: center;
-      font-size: 0.85rem;
-    }
-  }
-  
+}

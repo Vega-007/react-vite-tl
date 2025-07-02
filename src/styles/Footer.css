@@ -1,0 +1,46 @@
+/* === FOOTER SECTION === */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #ccc;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .footer p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* === GLOBAL STICKY FOOTER LAYOUT UTILITIES === */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content-wrap {
+    flex: 1;
+  }
+  

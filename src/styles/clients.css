@@ -1,0 +1,60 @@
+/* Clients Section */
+.clients {
+    background-color: #111;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .clients-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .clients-track {
+    display: flex;
+    animation: scrollClients 20s linear infinite;
+    width: fit-content;
+  }
+  
+  .client-logo {
+    height: 80px;
+    margin: 0 25px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+  }
+  
+  .client-logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Animation */
+  @keyframes scrollClients {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .client-logo {
+      height: 50px;
+      margin: 0 15px;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }
+  

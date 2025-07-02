@@ -1,35 +1,55 @@
 import React from "react";
-import "../styles/pages.css";
+import "../styles/Projectsp.css";
+
+import project1 from "../assets/project1.jpeg";
+import project2 from "../assets/project2.jpeg";
+import project3 from "../assets/project3.jpeg";
+import project4 from "../assets/project4.jpeg";
+import project5 from "../assets/project5.jpeg";
+import project6 from "../assets/project6.jpeg";
 
 const Projects = () => {
   const projects = [
-    { image: "/assets/project1.jpg", title: "High-Rise Office Facade", description: "Completed aluminum facade installation for a major corporate building." },
-    { image: "/assets/project2.jpg", title: "Shopping Mall Windows", description: "Fabrication and installation of energy-efficient aluminum windows." },
-    { image: "/assets/project3.jpg", title: "Ashai Glass India", description: "Collaborated on advanced glass installations for commercial buildings." },
-    { image: "/assets/project4.jpg", title: "Fenner India, Chennai", description: "Executed facade and window installations for industrial structures." },
-    { image: "/assets/project5.jpg", title: "EMPEE Sugars, Chennai", description: "Custom aluminum partition work for industrial office spaces." },
-    { image: "/assets/project6.jpg", title: "Fennar India, Madurai", description: "Energy-efficient UPVC windows and door solutions for the manufacturing plant." },
-    { image: "/assets/project7.jpg", title: "Fennar India, Chennai", description: "Modern facade design and installation for the main office." },
-    { image: "/assets/project8.jpg", title: "Essan India Pvt Ltd, Pondicherry", description: "Structural aluminum work and partition installations for corporate headquarters." },
-    { image: "/assets/project9.jpg", title: "MRF Tyres, Chennai", description: "Advanced facade and ventilation system installation for the factory." },
-    { image: "/assets/project10.jpg", title: "Raziam Exports, Chennai", description: "Custom aluminum doors and partitions for commercial exports." },
-    { image: "/assets/project11.jpg", title: "K.H. Shoes, Ranipet", description: "Facades and aluminum windows for the retail establishment." },
-    { image: "/assets/project12.jpg", title: "Dr. Cherian Hospital, Tada", description: "Architectural aluminum framing and window installations for medical premises." },
-    { image: "/assets/project13.jpg", title: "Raadha Rajendran Hospital, Chennai", description: "Facade installation and aluminum framing for a state-of-the-art hospital." },
-    { image: "/assets/project14.jpg", title: "MMM Hospital, Chennai", description: "Advanced aluminum facade installation for medical and healthcare facilities." },
-    { image: "/assets/project15.jpg", title: "Electronic Company, Chennai", description: "Aluminum frame installation for an electronic company manufacturing plant." },
-    { image: "/assets/project16.jpg", title: "Archid Medicine, Chennai", description: "Energy-efficient windows and partition installations for the pharma company." },
-    { image: "/assets/project17.jpg", title: "Puthiya Thalaimurai TV Channel Office, Chennai", description: "Modern office facades and aluminum window installations for a media channel." }
+    {
+      image: project1,
+      title: "Rasik Enclave",
+      description: "Aluminum and glass works for a modern residential enclave."
+    },
+    {
+      image: project2,
+      title: "Raadha Rajendran Hospital",
+      description: "Facade installation and aluminum framing for a state-of-the-art hospital."
+    },
+    {
+      image: project3,
+      title: "Ana Oleo",
+      description: "Energy-efficient window and partition solutions for the industrial unit."
+    },
+    {
+      image: project4,
+      title: "Eaton, Pondicherry",
+      description: "Complete aluminum fabrication and installation for the corporate facility."
+    },
+    {
+      image: project5,
+      title: "Eaton Pondicherry",
+      description: "Structural glazing and modern facade works for the manufacturing plant."
+    },
+    {
+      image: project6,
+      title: "Sparthan School",
+      description: "Windows, doors, and facade work for an educational institution."
+    }
   ];
 
   return (
     <section className="projects">
       <div className="container">
-        <h2>Our Latest Projects</h2>
+        <h2 className="projects-heading">Our Latest Projects</h2>
         <div className="project-list">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt={project.title || "Project Image"} />
               <div className="project-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>

@@ -1,0 +1,193 @@
+/* === SERVICES SECTION === */
+.services {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #1a1a1a;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services-heading {
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.services-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #145dc0;
+  border-radius: 2px;
+}
+
+/* === SLIDER STRUCTURE === */
+.horizontal-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.slider-btn {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 3px 8px rgba(26, 115, 232, 0.4);
+  min-width: 44px;
+  min-height: 44px;
+  user-select: none;
+}
+
+.slider-btn:hover:not(:disabled) {
+  background-color: #145dc0;
+  box-shadow: 0 5px 15px rgba(20, 93, 192, 0.6);
+}
+
+.slider-btn:disabled {
+  background-color: #a0c1f7;
+  box-shadow: none;
+  cursor: default;
+}
+
+/* === CARD WRAPPING === */
+.service-strip-wrapper {
+  overflow: hidden;
+  width: calc(360px * 3);
+  max-width: 100%;
+  margin: 0 10px;
+}
+
+.service-strip {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+/* === INDIVIDUAL SERVICE CARD === */
+.service-slide-link {
+  flex: 0 0 340px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f9fbff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-slide-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(26, 115, 232, 0.3);
+}
+
+.service-slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #1a73e8;
+}
+
+.service-slide h3 {
+  font-size: 1.2rem;
+  margin: 16px 16px 8px 16px;
+  font-weight: 700;
+  color: #145dc0;
+}
+
+.service-slide p {
+  font-size: 1rem;
+  margin: 0 16px 20px 16px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width: 1024px) {
+  .service-strip-wrapper {
+    width: calc(320px * 2);
+  }
+
+  .service-slide-link {
+    flex: 0 0 300px;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-btn {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+
+  .service-strip-wrapper {
+    width: 100%;
+  }
+
+  .service-strip {
+    justify-content: flex-start;
+  }
+
+  .service-slide-link {
+    flex: 0 0 90vw;
+    margin: 0 5px;
+  }
+
+  .services-heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 1.6rem;
+    width: 90%;
+  }
+
+  .service-slide h3 {
+    font-size: 1rem;
+  }
+
+  .service-slide p {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  .service-slide img {
+    height: 180px;
+  }
+}
+
+/* === FADE ONLY FOR STRIP === */
+@keyframes fadeOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.service-strip {
+  animation: fadeOnly 0.6s ease-in-out both;
+}

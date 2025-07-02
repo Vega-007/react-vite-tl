@@ -1,0 +1,95 @@
+/* === ROOT SERVICES SECTION === */
+.services {
+  padding: 100px 20px 80px;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  scroll-margin-top: 120px; /* For anchor nav offset */
+}
+
+/* === SECTION HEADING === */
+.services .section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a73e8;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.services .section-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #1a73e8, #0d47a1);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* === SERVICE LIST GRID === */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* === INDIVIDUAL CARD === */
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* === CARD IMAGE === */
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* === CARD TITLE === */
+.service-card h3 {
+  font-size: 1.3rem;
+  margin: 20px 20px 10px;
+  color: #1a73e8;
+}
+
+/* === CARD DESCRIPTION === */
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 20px 20px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 15px 60px;
+  }
+
+  .services .section-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .service-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
