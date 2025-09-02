@@ -1,10 +1,11 @@
-.projects {
+/* === ROOT PROJECTS SECTION === */
+.projectsp {
   padding: 100px 20px 60px;
   background-color: #f9f9f9;
   font-family: 'Poppins', sans-serif;
 }
 
-.projects-heading {
+.projectsp-heading {
   font-size: 2.5rem;
   color: #1a73e8;
   text-align: center;
@@ -12,7 +13,7 @@
   position: relative;
 }
 
-.projects-heading::after {
+.projectsp-heading::after {
   content: "";
   display: block;
   width: 80px;
@@ -22,13 +23,13 @@
   border-radius: 2px;
 }
 
-.project-list {
+.projectsp-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-.project-card {
+.projectsp-card {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -36,32 +37,32 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.projectsp-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-.project-card img {
+.projectsp-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;
 }
 
-.project-info {
+.projectsp-info {
   padding: 20px;
   background-color: #ffffff;
   border-top: 3px solid #1a73e8;
   text-align: left;
 }
 
-.project-info h3 {
+.projectsp-info h3 {
   font-size: 1.3rem;
   color: #1a73e8;
   margin-bottom: 10px;
 }
 
-.project-info p {
+.projectsp-info p {
   font-size: 1rem;
   color: #444;
   line-height: 1.6;
@@ -69,26 +70,26 @@
 
 /* === Responsive Fixes === */
 @media (max-width: 992px) {
-  .projects-heading {
+  .projectsp-heading {
     font-size: 2.2rem;
   }
 
-  .project-card img {
+  .projectsp-card img {
     height: 180px;
   }
 }
 
 @media (max-width: 600px) {
-  .projects-heading {
+  .projectsp-heading {
     font-size: 2rem;
     margin-bottom: 30px;
   }
 
-  .project-info h3 {
+  .projectsp-info h3 {
     font-size: 1.1rem;
   }
 
-  .project-info p {
+  .projectsp-info p {
     font-size: 0.95rem;
   }
 }

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../styles/service.css";
+import "../styles/services.css";
 import Services1 from "../assets/services1.jpeg";
 import Services2 from "../assets/services2.jpeg";
 import Services3 from "../assets/services3.jpeg";
@@ -12,7 +12,8 @@ import Services8 from "../assets/services8.jpeg";
 import Services9 from "../assets/services9.jpeg";
 
 const Services = () => {
-  const [currentService, setCurrentService] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const sliderRef = useRef(null);
 
   const services = [
     { image: Services1, title: "Aluminium Composite Panel (ACP) and Facade Work", description: "Expert ACP and façade solutions with modern aesthetics and durability.", path: "/services1" },
@@ -26,72 +27,40 @@ const Services = () => {
     { image: Services9, title: "UPVC Windows & Doors", description: "Energy-efficient and stylish UPVC window and door solutions.", path: "/services9" }
   ];
 
-  const cardWidth = 360; // width + margin
-  const visibleCards = 3;
-
-  // Retrieve saved service index from localStorage when component mounts
   useEffect(() => {
-    const savedIndex = localStorage.getItem("currentServiceIndex");
+    const sliderElement = sliderRef.current;
+    if (!sliderElement) return;
 
-    if (savedIndex) {
-      // If saved index exists, use it
-      setCurrentService(parseInt(savedIndex, 10));
-    } else {
-      // If no saved index, set the default first service
-      setCurrentService(0);
-    }
+    const handleScroll = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = sliderElement;
+      if (scrollWidth > clientWidth) {
+        const progress = (scrollLeft / (scrollWidth - clientWidth)) * 100;
+        setScrollProgress(progress);
+      } else {
+        setScrollProgress(0);
+      }
+    };
 
-    // Reset the localStorage index on page reload (or based on your specific logic)
-    window.addEventListener("beforeunload", () => {
-      // Clear localStorage to reset the service index when page is refreshed
-      localStorage.removeItem("currentServiceIndex");
-    });
+    sliderElement.addEventListener("scroll", handleScroll);
 
+    // Clean up the event listener
     return () => {
-      // Cleanup the event listener on component unmount
-      window.removeEventListener("beforeunload", () => {});
+      sliderElement.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const nextService = () => {
-    if (currentService < services.length - visibleCards) {
-      setCurrentService(currentService + 1);
-    }
-  };
-
-  const prevService = () => {
-    if (currentService > 0) {
-      setCurrentService(currentService - 1);
-    }
-  };
-
-  const handleServiceClick = (index) => {
-    // Save the current service index in localStorage when a service is clicked
-    localStorage.setItem("currentServiceIndex", index);
-  };
 
   return (
     <section className="services">
       <h2 className="services-heading">Our Services</h2>
-
+      
       <div className="horizontal-slider">
-        {/* Left button */}
-        <button className="slider-btn prev" onClick={prevService}>
-          &#10094;
-        </button>
-        {/* The wrapper for the slider */}
-        <div className="service-strip-wrapper">
-          <div
-            className="service-strip"
-            style={{ transform: `translateX(-${currentService * cardWidth}px)` }}
-          >
-            {/* Loop through each service */}
+        <div className="service-strip-wrapper" ref={sliderRef}>
+          <div className="service-strip">
             {services.map((service, index) => (
               <Link
                 to={service.path}
                 key={index}
                 className="service-slide-link"
-                onClick={() => handleServiceClick(index)} // Save the index on click
               >
                 <div className="service-slide">
                   <img src={service.image} alt={service.title} />
@@ -102,10 +71,12 @@ const Services = () => {
             ))}
           </div>
         </div>
-        {/* Right button */}
-        <button className="slider-btn next" onClick={nextService}>
-          &#10095;
-        </button>
+        <div className="slider-progress-container">
+          <div 
+            className="slider-progress-bar" 
+            style={{ width: `${scrollProgress}%` }}
+          ></div>
+        </div>
       </div>
     </section>
   );

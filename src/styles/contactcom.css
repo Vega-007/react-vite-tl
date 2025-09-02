@@ -1,21 +1,23 @@
 /* === CONTACT SECTION === */
-.contact-section {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.contactcom-section {
   background-color: #fff;
   padding: 80px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #1a1a1a;
   text-align: center;
 }
 
-.contact-container {
+.contactcom-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /* === SECTION HEADING === */
-.contact-heading {
-  font-size: 2.2rem;
+.contactcom-heading {
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1a73e8;
   margin-bottom: 50px;
@@ -24,7 +26,7 @@
   padding-bottom: 10px;
 }
 
-.contact-heading::after {
+.contactcom-heading::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -37,7 +39,7 @@
 }
 
 /* === HORIZONTAL CARD WRAPPER === */
-.contact-horizontal-card {
+.contactcom-horizontal-card {
   display: flex;
   justify-content: space-between;
   background: #f9fbff;
@@ -51,8 +53,8 @@
 }
 
 /* === EACH BOX === */
-.contact-box {
-  flex: 1 1 300px;
+.contactcom-box {
+  flex: 1 1 30px;
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -60,14 +62,15 @@
   padding: 10px 0;
 }
 
-.contact-box h3 {
-  font-size: 1.1rem;
+.contactcom-box h3 {
+  font-size: 1.2rem;
   color: #145dc0;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
-.contact-box p {
-  font-size: 1rem;
+.contactcom-box p {
+  font-size: 1.1rem;
   color: #333;
   margin: 0;
   line-height: 1.6;
@@ -75,7 +78,7 @@
 }
 
 /* === ICONS === */
-.contact-icon {
+.contactcom-icon {
   width: 32px;
   height: 32px;
   background-color: #1a73e8;
@@ -88,15 +91,15 @@
   margin-top: 5px;
 }
 
-.contact-icon.phone {
+.contactcom-icon.phone {
   background-image: url("https://img.icons8.com/ios-filled/50/ffffff/phone.png");
 }
 
-.contact-icon.email {
+.contactcom-icon.email {
   background-image: url("https://img.icons8.com/ios-filled/50/ffffff/new-post.png");
 }
 
-.contact-icon.location {
+.contactcom-icon.location {
   background-image: url("https://img.icons8.com/ios-filled/50/ffffff/marker.png");
 }
 
@@ -112,42 +115,39 @@
   }
 }
 
-/* === RESPONSIVE TWEAKS === */
+/* ======================================= */
+/* === MOBILE STYLES (OVERRIDE) === */
+/* ======================================= */
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 60px 15px;
+  .contactcom-section {
+    padding: 30px 15px; /* Reduced padding for mobile */
   }
 
-  .contact-heading {
+  .contactcom-heading {
     font-size: 1.9rem;
   }
 
-  .contact-horizontal-card {
-    flex-direction: column;
+  .contactcom-horizontal-card {
+    flex-direction: column; /* Stack vertically on mobile */
     padding: 25px 20px;
-    gap: 20px;
+    gap: 15px; /* Reduced gap for a more compact vertical layout */
   }
 
-  .contact-box {
+  .contactcom-box {
     flex-direction: row;
     gap: 14px;
+    padding: 8px 0; /* Reduced padding for less space around each box */
   }
-}
-
-@media (max-width: 480px) {
-  .contact-heading {
-    font-size: 1.7rem;
+  
+  .contactcom-box h3 {
+    font-size: 1.1rem;
   }
 
-  .contact-box h3 {
+  .contactcom-box p {
     font-size: 1rem;
   }
 
-  .contact-box p {
-    font-size: 0.95rem;
-  }
-
-  .contact-icon {
+  .contactcom-icon {
     width: 28px;
     height: 28px;
     background-size: 60%;

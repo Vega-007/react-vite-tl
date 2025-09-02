@@ -3,29 +3,29 @@ import "../styles/contactcom.css";
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact-section">
-      <div className="contact-container">
-        <h2 className="contact-heading">Contact Us</h2>
+    <section id="contact" className="contactcom-section">
+      <div className="contactcom-container">
+        <h2 className="contactcom-heading">Contact Us</h2>
 
-        <div className="contact-horizontal-card">
-          <div className="contact-box">
-            <div className="contact-icon phone" />
+        <div className="contactcom-horizontal-card">
+          <div className="contactcom-box">
+            <div className="contactcom-icon phone" />
             <div>
               <h3>Phone</h3>
               <p>+91-94453 78403<br />+91-70105 02388</p>
             </div>
           </div>
 
-          <div className="contact-box">
-            <div className="contact-icon email" />
+          <div className="contactcom-box">
+            <div className="contactcom-icon email" />
             <div>
               <h3>Email</h3>
               <p>tialufab@gmail.com</p>
             </div>
           </div>
 
-          <div className="contact-box">
-            <div className="contact-icon location" />
+          <div className="contactcom-box">
+            <div className="contactcom-icon location" />
             <div>
               <h3>Address</h3>
               <p>

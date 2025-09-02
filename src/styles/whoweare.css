@@ -1,4 +1,6 @@
 /* === ABOUT SECTION === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .about {
   background-color: #fff;
   color: #1a1a1a;
@@ -13,7 +15,8 @@
 }
 
 .about h2 {
-  font-size: 2.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1a73e8;
   position: relative;
@@ -21,6 +24,8 @@
   padding-bottom: 8px;
   margin-bottom: 30px;
   animation: fadeUp 0.8s ease forwards;
+  text-align: justify;
+  text-align-last: center; /* Justifies and centers the last line of text */
 }
 
 .about h2::after {
@@ -36,6 +41,7 @@
 }
 
 .about p {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -43,6 +49,7 @@
   animation: fadeUp 1s ease forwards;
   animation-delay: 0.3s;
   opacity: 0;
+  text-align: justify;
 }
 
 .about strong {
@@ -78,6 +85,11 @@
 @media (max-width: 768px) {
   .about {
     padding: 50px 15px;
+  }
+
+  .about h2,
+  .about p {
+    text-align: left; /* Reverts to left alignment for better readability on mobile */
   }
 
   .about h2 {

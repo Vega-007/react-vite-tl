@@ -43,14 +43,14 @@ const Projects = () => {
   ];
 
   return (
-    <section className="projects">
+    <section className="projectsp">
       <div className="container">
-        <h2 className="projects-heading">Our Latest Projects</h2>
-        <div className="project-list">
+        <h2 className="projectsp-heading">Our Latest Projects</h2>
+        <div className="projectsp-list">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div key={index} className="projectsp-card">
               <img src={project.image} alt={project.title || "Project Image"} />
-              <div className="project-info">
+              <div className="projectsp-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
               </div>

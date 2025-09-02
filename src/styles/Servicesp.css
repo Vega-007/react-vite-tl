@@ -1,23 +1,34 @@
 /* === ROOT SERVICES SECTION === */
-.services {
+.servicesp {
   padding: 100px 20px 80px;
   background-color: #f9f9f9;
   font-family: 'Poppins', sans-serif;
-  scroll-margin-top: 120px; /* For anchor nav offset */
+  scroll-margin-top: 120px;
+}
+
+/* === CONTAINER CLASS FOR CENTERING CONTENT === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* This is the key to centering the container */
+  padding: 0 20px;
 }
 
 /* === SECTION HEADING === */
-.services .section-heading {
+.servicesp-heading {
   text-align: center;
   font-size: 2.5rem;
   color: #1a73e8;
+  font-weight: 700;
   margin-bottom: 50px;
   position: relative;
-  display: inline-block;
+  display: block; /* <-- change inline-block to block */
   padding-bottom: 10px;
+  margin-left: auto;  /* add */
+  margin-right: auto; /* add */
 }
 
-.services .section-heading::after {
+
+.servicesp-heading::after {
   content: '';
   display: block;
   width: 80px;
@@ -28,14 +39,15 @@
 }
 
 /* === SERVICE LIST GRID === */
-.service-list {
+.servicesp-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  justify-content: center;
 }
 
 /* === INDIVIDUAL CARD === */
-.service-card {
+.servicesp-card {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -47,49 +59,53 @@
   flex-direction: column;
 }
 
-.service-card:hover {
+.servicesp-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* === CARD IMAGE === */
-.service-card img {
+.servicesp-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-bottom: 3px solid #1a73e8;
 }
 
 /* === CARD TITLE === */
-.service-card h3 {
+.servicesp-card h3 {
   font-size: 1.3rem;
+  font-weight: 600;
   margin: 20px 20px 10px;
   color: #1a73e8;
+  line-height: 1.2;
 }
 
 /* === CARD DESCRIPTION === */
-.service-card p {
+.servicesp-card p {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
   margin: 0 20px 20px;
+  flex-grow: 1;
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .services {
+  .servicesp {
     padding: 80px 15px 60px;
   }
 
-  .services .section-heading {
+  .servicesp-heading {
     font-size: 2rem;
     margin-bottom: 40px;
   }
 
-  .service-card h3 {
+  .servicesp-card h3 {
     font-size: 1.15rem;
   }
 
-  .service-card p {
+  .servicesp-card p {
     font-size: 0.95rem;
   }
 }

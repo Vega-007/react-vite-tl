@@ -1,9 +1,11 @@
 /* === PROJECTS SECTION === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .projects {
   background-color: #fff;
   color: #1a1a1a;
   padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
@@ -11,7 +13,7 @@
 .projects .section-heading {
   color: #1a73e8;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Standardized desktop heading size */
   margin-bottom: 40px;
   position: relative;
   display: inline-block;
@@ -33,7 +35,7 @@
 /* === PROJECT GRID === */
 .projects .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width for better desktop layout */
   gap: 2rem;
   justify-content: center;
   align-items: stretch;
@@ -70,7 +72,8 @@
 
 /* === TITLE === */
 .projects .project-item h3 {
-  font-size: 1.15rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem; /* Adjusted for better hierarchy */
   color: #145dc0;
   font-weight: 700;
   margin-bottom: 6px;
@@ -79,7 +82,8 @@
 
 /* === DESCRIPTION === */
 .projects .project-item p {
-  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem; /* Adjusted for better readability */
   color: #333;
   line-height: 1.6;
   word-break: break-word;
@@ -105,7 +109,11 @@
   }
 
   .projects .section-heading {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+  }
+
+  .projects .projects-grid {
+    grid-template-columns: 1fr; /* Display cards in a single column on mobile */
   }
 
   .projects .project-item img {
@@ -113,17 +121,17 @@
   }
 
   .projects .project-item h3 {
-    font-size: 1.05rem;
+    font-size: 1.2rem; /* Adjusted for mobile readability */
   }
 
   .projects .project-item p {
-    font-size: 0.95rem;
+    font-size: 1rem; /* Adjusted for mobile readability */
   }
 }
 
 @media (max-width: 480px) {
   .projects .section-heading {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     width: 90%;
   }
 
@@ -136,10 +144,10 @@
   }
 
   .projects .project-item h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .projects .project-item p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
