@@ -13,8 +13,8 @@ const projects = [
   },
   {
     img: project2Img,
-    title: "Sri Kanchi Kamakoti Sankara Vidyalaya, Podili, AP (2024)",
-    desc: "A contemporary educational block featuring parametric façade elements—shading, ventilation, and aesthetic flow."
+    title: "Ana Oleo",
+    desc: "A contemporary building featuring parametric façade elements—shading, ventilation, and aesthetic flow."
   }
 ];
 
